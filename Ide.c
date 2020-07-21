@@ -1,40 +1,19 @@
 #include<stdio.h>
-#include<string.h>
 int main()
 {
-      char str[50];
-      int len=0,i=0,k=0,count=0;
-      printf("enter the string\n");
-      scanf("%s",str);
-      printf("%s",str);
-      len=strlen(str);
-      count=len;
-      for(i=0;i<len;)
-      {
-            switch (str[i])
-            {
-                  case'a':
-                  case'A':
-                  case'e':
-                  case'E':
-                  case'i':
-                  case'I':
-                  case'o':
-                  case'O':
-                  case'u':
-                  case'U':
-                  for(k=i;k<count;k++);
-                  {
-                        str[k]=str[k+1];
-                  }
-                  count--;
-                  break;
-                  default:
-                  i++;
-                  
-            }
-      }
-      str[count]='\0';
-      printf("string after removing vowels is:%s",str);
+      char str1[30],str2[30];
+      int i;
+      printf("enter two strings \n");
+      gets(str1);
+      gets(str2);
+      i=0;
+      while(str1[i]==str2[i]&&str1[i]!='\0')
+      i++;
+      if(str1[i]>str2[i])
+      printf("str1 is greater than str2\n");
+      else if(str1[i]<str2[i])
+      printf("str2 is greater than sr1\n");
+      else
+      printf("str1 is equal to str2\n");
       return 0;
-}10
+}
